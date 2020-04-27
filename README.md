@@ -1,4 +1,4 @@
-## Android face detection and recognition example using TensorFlow-Lite
+## Simple face detection and recognition on Android using TensorFlow-Lite
 
 <div align="center">
 <img src="sample.png" width="400"/>
