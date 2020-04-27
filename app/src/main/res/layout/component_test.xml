@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.TFLiteFaceExample.ComponentTests">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/original"
+            android:layout_width="400dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:scaleType="fitStart" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_testFaceDetector2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detect Faces"
+                android:onClick="onTestFaceDetectorRetina"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id = "@+id/txt_face_detection_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inference time: ______ ms"/>
+            <Button
+                android:id="@+id/bt_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="Reset"
+                android:onClick="onResetDetectionImage"/>
+
+            <Button
+                android:id="@+id/bt_nextDetectImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Switch image"
+                android:onClick="onSwitchDetectionImage"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/probe1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:scaleType="fitStart" />
+
+            <ImageView
+                android:id="@+id/probe2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:scaleType="fitStart" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/bt_switchProbe1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="same probes"
+                    android:onClick="onSwitchProbe"/>
+                <Button
+                    android:id="@+id/bt_switchProbe2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="different probes"
+                    android:onClick="onSwitchProbe"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/bt_testFeatureExtractor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Run verification"
+                android:onClick="onTestFaceRecognizer"/>
+
+            <TextView
+                android:id = "@+id/txt_face_recognition_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Similarity: ,inference time: "/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
